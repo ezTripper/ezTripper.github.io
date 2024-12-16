@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/eztripper/static/css/main.8b888768.css",
+    "main.js": "/eztripper/static/js/main.78cf4942.js",
+    "static/media/fon.jpg": "/eztripper/static/media/fon.190ecd084c1b5521ac0a.jpg",
+    "index.html": "/eztripper/index.html",
+    "main.8b888768.css.map": "/eztripper/static/css/main.8b888768.css.map",
+    "main.78cf4942.js.map": "/eztripper/static/js/main.78cf4942.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8b888768.css",
+    "static/js/main.78cf4942.js"
+  ]
+}
