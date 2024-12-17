@@ -1,6 +1,6 @@
 {
 	"name": "eztripper",
-	"homepage": "https://ezTripper.github.io/",
+	"homepage": "https://ezTripper.github.io",
 	"version": "0.1.0",
 	"private": true,
 	"dependencies": {
