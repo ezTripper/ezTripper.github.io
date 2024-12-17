@@ -1,6 +1,6 @@
 {
 	"name": "eztripper",
-	"homepage": "https://ezTripper.github.io/eztripper/",
+	"homepage": "https://ezTripper.github.io/",
 	"version": "0.1.0",
 	"private": true,
 	"dependencies": {
@@ -12,7 +12,6 @@
 		"@types/react": "^18.0.15",
 		"@types/react-dom": "^18.0.6",
 		"axios": "^0.27.2",
-		"gh-pages": "^6.2.0",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
 		"react-router-dom": "^6.3.0",
@@ -24,7 +23,9 @@
 		"start": "react-scripts start",
 		"build": "react-scripts build",
 		"test": "react-scripts test",
-		"eject": "react-scripts eject"
+		"eject": "react-scripts eject",
+		"predeploy": "npm run build",
+		"deploy": "gh-pages -d build"
 	},
 	"eslintConfig": {
 		"extends": [
@@ -46,6 +47,7 @@
 	},
 	"devDependencies": {
 		"autoprefixer": "^10.4.7",
+		"gh-pages": "^6.2.0",
 		"postcss": "^8.4.14",
 		"tailwindcss": "^3.1.6"
 	}
