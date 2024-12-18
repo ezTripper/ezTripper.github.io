@@ -12,6 +12,7 @@
 html,
 body {
 	margin: 0;
+	height: 100%;
 	padding: 0;
 }
 
@@ -24,6 +25,8 @@ body {
 }
 
 body {
+	display: flex;
+	flex-direction: column;
 	background-image: url(/public/fon.jpg);
 	width: 100%;
 	min-height: 100%;
