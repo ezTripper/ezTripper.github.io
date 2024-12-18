@@ -83,7 +83,8 @@ body {
 /* Карточка */
 .card {
 	box-shadow: 0 4px 6px #788ef13d;
-	min-height: 20vh;
+	width: 400px;
+	height: 20vh;
 }
 
 .card:hover {
