@@ -1,12 +1,28 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 	-webkit-tap-highlight-color: transparent;
 }
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+
+/* Блокировка прокрутки */
+.no-scroll {
+	overflow: hidden;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+}
+
 body {
 	background-image: url(/public/fon.jpg);
 	width: 100%;
@@ -16,4 +32,134 @@ body {
 #root {
 	width: 100%;
 	height: 94.79vh;
+}
+
+/* Общие стили для анимации */
+.fade-enter {
+	opacity: 0;
+	transform: translateY(20px);
+}
+
+.fade-enter-active {
+	opacity: 1;
+	transform: translateY(0);
+	transition: opacity 300ms, transform 300ms;
+}
+
+.fade-exit {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+.fade-exit-active {
+	opacity: 0;
+	transform: translateY(-20px);
+	transition: opacity 300ms, transform 300ms;
+}
+
+/* Анимация только для элементов с классом 'animating' */
+.fade-enter-active,
+.fade-exit-active {
+	transition: opacity 300ms, transform 300ms;
+	max-height: 100vh; /* Устанавливаем максимальную высоту */
+	overflow: hidden;
+}
+/* Контейнер для карточек */
+.cards-container,
+.cards-container-two {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	flex-wrap: wrap;
+	gap: 1.5rem;
+	width: 100%;
+	max-width: 100%;
+	min-height: 100%;
+	transition: all 0.5s linear;
+	padding: 1.5rem 1vh 1.5rem 1vh;
+}
+
+/* Карточка */
+.card {
+	box-shadow: 0 4px 6px #788ef13d;
+	min-height: 20vh;
+}
+
+.card:hover {
+	box-shadow: 4px 4px 10px #0000004f;
+}
+
+/* Контент, который появляется при наведении */
+.card-content {
+	padding: 1rem;
+	border-radius: 0.4rem;
+	opacity: 0;
+	transition: all 0.34s ease-in-out;
+}
+
+.card:hover .card-content {
+	opacity: 1; /* Появление при наведении */
+	top: 0; /* Поднимаем описание */
+	cursor: pointer;
+	animation: shake 0.7s ease-in-out;
+	animation-fill-mode: both;
+}
+
+@keyframes shake {
+	0%,
+	100% {
+		transform: translateX(0);
+	}
+	25% {
+		transform: translateX(-5px);
+	}
+	50% {
+		transform: translateX(5px);
+	}
+	75% {
+		transform: translateX(-5px);
+	}
+}
+@keyframes wave-flow {
+	0% {
+		transform: translateY(100%) scaleY(0.2);
+		opacity: 0;
+	}
+	50% {
+		transform: translateY(-5px) scaleY(1.25);
+		opacity: 0.8;
+	}
+	100% {
+		transform: translateY(0) scaleY(1);
+		opacity: 1;
+	}
+}
+/* Контент, который отображается изначально */
+.card-content1 {
+	padding: 1rem;
+	transition: all 0.34s ease-in-out;
+}
+
+.card:hover .card-content1 {
+	opacity: 0;
+	top: -100%;
+	animation: shake-out 0.7s ease-in-out;
+	animation-fill-mode: both;
+}
+
+@keyframes shake-out {
+	0%,
+	100% {
+		transform: translateX(-5px);
+	}
+	25% {
+		transform: translateX(5px);
+	}
+	50% {
+		transform: translateX(-5px);
+	}
+	75% {
+		transform: translateX(0px);
+	}
 }
