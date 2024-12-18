@@ -3,7 +3,7 @@ import {Link} from "react-router-dom";
 
 export function Navigation() {
 	return (
-		<nav className="h-[50px] flex justify-between px-5 bacdrop-filter backdrop-brightness-15  backdrop-blur-3xl items-center text-white bg-gray-800 bg-opacity-30 ">
+		<nav className="h-[50px] flex sticky z-10 top-0 justify-between px-5 backdrop-blur-2xl items-center text-white bg-gray-400 bg-opacity-10 ">
 			<span className="font-bold text-2xl">
 				<Link
 					to="/"
